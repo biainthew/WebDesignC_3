@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;300;700&family=Orbit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbit", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+#wrap {
+  width: 1000px;
+  height: 650px;
+  position: relative;
+}
+
+#header {
+  width: 200px;
+  height: 100%;
+}
+
+#slide {
+  width: 800px;
+  height: 350px;
+}
+
+#content {
+  width: 800px;
+  height: 200px;
+}
+
+.header {
+  background: #fce9e6;
+  font-weight: bold;
+  text-align: center;
+}
+.header-logo {
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #fff;
+}
+.header-logo a {
+  font-size: 24px;
+  color: #ff8a5e;
+}
+.header-logo a span {
+  color: #f6510c;
+}
+.header-nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6px 0;
+}
+.header-nav ul li a:hover {
+  background: #fff;
+  color: #f6510c;
+}
+.header-nav ul li a.active {
+  background: #fff;
+  color: #f6510c;
+}
+.header-nav > ul {
+  margin-top: 20px;
+}
+.header-nav > ul > li {
+  position: relative;
+}
+.header-nav > ul > li > a {
+  font-size: 18px;
+}
+.header-nav > ul > li > ul {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 100%;
+  background: #fce9e6;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.slide ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide ul li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.slide ul li:nth-child(2) {
+  z-index: 2;
+}
+.slide ul li:nth-child(3) {
+  z-index: 1;
+}
+.slide ul li p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 24px;
+  color: #ff8a5e;
+  background: #fce9e6;
+}
+.slide ul li p span {
+  color: #f6510c;
+}
+
+.content {
+  justify-content: space-between;
+}
+.content > div {
+  padding: 6px 8px;
+  flex-basis: 33%;
+}
+.content-title {
+  font-size: 18px;
+  background: #fce9e6;
+  padding: 0 0 2px 4px;
+  color: #f6510c;
+  font-weight: bold;
+}
+.content-text {
+  padding: 0 0 2px 4px;
+}
+.content-text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.content-text ul li {
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+.content-text ul li:nth-child(2n) {
+  background: #fce9e6;
+}
+.content-text ul li p {
+  cursor: pointer;
+}
+.content-text ul li p:hover {
+  font-weight: bold;
+}
+.content-text ul li span {
+  font-size: 14px;
+  letter-spacing: -1px;
+  color: #888;
+}
+.content-img ul {
+  justify-content: space-between;
+}
+.content-img ul li {
+  width: 33%;
+  overflow: hidden;
+}
+.content-img ul li img {
+  width: 291%;
+}
+.content3 {
+  position: relative;
+}
+.content3 > div {
+  overflow: hidden;
+}
+.content3 img {
+  width: 113%;
+}
+.content3 button {
+  border: none;
+  background: #fce9e6;
+  color: #f6510c;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.footer {
+  background: #dfdfdf;
+}
+.footer-logo {
+  padding: 0 10px;
+  height: 100px;
+  line-height: 100px;
+  border-right: 1px solid #fff;
+}
+.footer-logo a {
+  font-size: 24px;
+  color: #888;
+}
+.footer-logo a span {
+  color: #666;
+}
+.footer-content {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content > div {
+  flex-basis: 50%;
+  line-height: 50px;
+}
+.footer-menu ul {
+  gap: 16px;
+}
+.footer-copy {
+  color: #888;
+  font-size: 14px;
+}
+
+.modal {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #Fff;
+  box-shadow: 0 0 4px #999;
+  width: 400px;
+  height: 300px;
+  z-index: 99999;
+  border-radius: 4px;
+  padding: 10px;
+  transition: 0.3s;
+}
+.modal-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.modal-content {
+  line-height: 214px;
+  height: 214px;
+  text-align: center;
+}
+.modal-footer {
+  text-align: center;
+}
+.modal-footer .btn-close {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  display: none;
+}/*# sourceMappingURL=style.css.map */
